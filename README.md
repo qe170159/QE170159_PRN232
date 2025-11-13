@@ -138,6 +138,43 @@ The application comes with 3 sample movies:
 
 Feel free to add more movies, edit existing ones, or delete them as needed.
 
+## Deployment URLs
+
+**Live Application:** (Will be updated after deployment)
+- Frontend (Vercel): 
+- Backend API (Render): 
+
+## Deployment Instructions
+
+### Backend Deployment (Render)
+
+1. Go to https://render.com and sign up
+2. Click "New +" → "Web Service"
+3. Connect your GitHub repository
+4. Configure:
+   - **Name:** movie-api
+   - **Runtime:** Node
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+   - **Root Directory:** `server`
+5. Add Environment Variables:
+   - `MONGODB_URI`: Your MongoDB connection string
+   - `NODE_ENV`: production
+6. Deploy!
+7. Note the deployed URL (e.g., https://movie-api-xxxx.onrender.com)
+
+### Frontend Deployment (Vercel)
+
+1. Go to https://vercel.com and sign up
+2. Click "Add New..." → "Project"
+3. Import your GitHub repository
+4. Configure:
+   - **Framework:** Vite
+   - **Root Directory:** ./
+5. Add Environment Variable:
+   - `VITE_API_URL`: Your Render backend URL (https://movie-api-xxxx.onrender.com/api)
+6. Deploy!
+
 ## Future Enhancements
 
 - Local storage persistence
